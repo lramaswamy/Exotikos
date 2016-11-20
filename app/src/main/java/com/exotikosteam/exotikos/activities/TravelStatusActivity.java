@@ -105,7 +105,7 @@ public class TravelStatusActivity extends ExotikosBaseActivity implements Fragme
 
     private void createTravelPrepCard() {
         cardViewFragmentList.add(0, CardViewFragment.newInstance("Travel Preparation", "", true));
-        TravelPrepFragment prepFragment = TravelPrepFragment.newInstance(trip);
+        TravelPrepFragment prepFragment = TravelPrepFragment.newInstance(trip, true);
         cardViewFragmentList.get(0).setFragment(prepFragment);
     }
 
@@ -136,9 +136,9 @@ public class TravelStatusActivity extends ExotikosBaseActivity implements Fragme
 //        if(buttonName.equals("LaunchSecurityCheckin")) {
 //            showSecurityCheckinFragment();
 //        }
-//        if(buttonName.equals("LaunchSecurityCheckinHelpPage")) {
-//            showSecurityCheckinHelpFragment();
-//        }
+        if(buttonName.equals("LaunchTravelPrepActivity")) {
+            showTravelPrepActivity();
+        }
         if(buttonName.equals("LaunchSecurityCheckinActivity")) {
             showSecurityCheckinActivity();
         }
@@ -146,6 +146,12 @@ public class TravelStatusActivity extends ExotikosBaseActivity implements Fragme
 
     private void showSecurityCheckinActivity() {
         Intent i = new Intent(this, SecurityProcessActivity.class);
+        startActivity(i);
+    }
+
+    private void showTravelPrepActivity() {
+        Intent i = new Intent(this, TravelPrepProcessActivity.class);
+        i.putExtra("trip", Parcels.wrap(trip));
         startActivity(i);
     }
 

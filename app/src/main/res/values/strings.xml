@@ -48,5 +48,6 @@
     <string name="dateLanding">Flight Landing Date</string>
     <string name="delete_trip">Delete trip?</string>
     <string name="yes_delete">Yes, Delete</string>
+    <string name="liquidRules">Liquids Rule</string>
 </resources>
 

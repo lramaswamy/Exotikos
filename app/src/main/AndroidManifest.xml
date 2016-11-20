@@ -42,7 +42,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.HelpActivity" />
+            android:name=".activities.TravelPrepProcessActivity"
+            android:label="Checkin List"/>
         <activity
             android:name=".activities.NewTripActivity"
             android:label="@string/new_trip" />
